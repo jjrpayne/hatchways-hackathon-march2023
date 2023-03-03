@@ -1,0 +1,137 @@
+{
+    "products": [{
+            "id": 1,
+            "name": "Red T-Shirt",
+            "price": 120.40,
+            "stock": 250,
+            "stock_warning": 100,
+            "active": true
+        }, {
+            "id": 2,
+            "name": "Blue Jeans",
+            "price": 89.99,
+            "stock": 500,
+            "stock_warning": 100,
+            "active": true
+        }, {
+            "id": 3,
+            "name": "White Sneakers",
+            "price": 70.50,
+            "stock": 300,
+            "stock_warning": 50,
+            "active": true
+        }, {
+            "id": 4,
+            "name": "Black Dress",
+            "price": 200.00,
+            "stock": 150,
+            "stock_warning": 30,
+            "active": true
+        }, {
+            "id": 5,
+            "name": "Leather Jacket",
+            "price": 399.99,
+            "stock": 100,
+            "stock_warning": 20,
+            "active": true
+        }, {
+            "id": 6,
+            "name": "Running Shoes",
+            "price": 120.00,
+            "stock": 400,
+            "stock_warning": 100,
+            "active": true
+        }, {
+            "id": 7,
+            "name": "Smartwatch",
+            "price": 299.99,
+            "stock": 50,
+            "stock_warning": 10,
+            "active": true
+        }, {
+            "id": 8,
+            "name": "Sunglasses",
+            "price": 89.50,
+            "stock": 250,
+            "stock_warning": 50,
+            "active": true
+        }, {
+            "id": 9,
+            "name": "Swimsuit",
+            "price": 60.00,
+            "stock": 200,
+            "stock_warning": 50,
+            "active": true
+        }, {
+            "id": 10,
+            "name": "Winter Hat",
+            "price": 30.00,
+            "stock": 1000,
+            "stock_warning": 200,
+            "active": true
+        }, {
+            "id": 11,
+            "name": "Backpack",
+            "price": 75.99,
+            "stock": 300,
+            "stock_warning": 50,
+            "active": true
+        }, {
+            "id": 12,
+            "name": "Running Shorts",
+            "price": 50.00,
+            "stock": 400,
+            "stock_warning": 100,
+            "active": true
+        }, {
+            "id": 13,
+            "name": "Denim Skirt",
+            "price": 89.00,
+            "stock": 200,
+            "stock_warning": 50,
+            "active": true
+        }, {
+            "id": 14,
+            "name": "Leather Boots",
+            "price": 249.99,
+            "stock": 100,
+            "stock_warning": 20,
+            "active": true
+        }, {
+            "id": 15,
+            "name": "Running Jacket",
+            "price": 150.00,
+            "stock": 200,
+            "stock_warning": 50,
+            "active": true
+        }, {
+            "id": 16,
+            "name": "Raincoat",
+            "price": 99.99,
+            "stock": 50,
+            "stock_warning": 60,
+            "active": true
+        }, {
+            "id": 17,
+            "name": "Summer Dress",
+            "price": 69.99,
+            "stock": 80,
+            "stock_warning": 100,
+            "active": true
+        }, {
+            "id": 18,
+            "name": "Flip Flops",
+            "price": 25.50,
+            "stock": 30,
+            "stock_warning": 50,
+            "active": true
+        }, {
+            "id": 19,
+            "name": "Beach Towel",
+            "price": 35.00,
+            "stock": 20,
+            "stock_warning": 30,
+            "active": true
+        }
+    ]
+}
