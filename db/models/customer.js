@@ -14,7 +14,12 @@ const Customer = db.define('customer', {
 
 Customer.getTopCustomers = async function (quantity, strategy) {
   // TODO Modify this query for getting the TOP Customers
-  return db.query('SELECT * FROM customers', {
+  if (strategy == 'volume'){
+    queryString = 'SELECT * FROM customers c ORDER BY (SELECT COUNT (*) FROM orders o WHERE o.customer_id = c.id) DESC LIMIT ' + quantity
+  } else {
+    queryString = 'SELECT * FROM customers'
+  }
+  return db.query(queryString, {
     type: Sequelize.QueryTypes.SELECT
   })
 }
