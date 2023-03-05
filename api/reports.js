@@ -32,7 +32,23 @@ const topCustomers = async (req, res, next) => {
 }
 
 const stockWarning = async (req, res, next) => {
-  return res.json(await Product.getStockWarningProducts())
+  try {
+    const dbStockWarning = await Product.getStockWarningProducts()
+    const productsToReturn = dbStockWarning.map(product => {
+      return {
+        id: product.id,
+        name: product.name,
+        stock: product.stock,
+        stock_warning: product.stock_warning,
+        last_sold: product["max(updatedAt)"]
+      }
+    })
+    return res.json({products: productsToReturn})
+  } catch (err) {
+    const error = {message: err.message, stack: err.stack }
+    res.status(400)
+    return res.json(error)
+  }
 }
 
 router.route('/topCustomers').get(topCustomers).all(methodNotAllowed)

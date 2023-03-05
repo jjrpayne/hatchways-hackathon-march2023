@@ -29,16 +29,10 @@ const Product = db.define('product', {
 }, { timestamps: true })
 
 Product.getStockWarningProducts = async function () {
-  // TODO Modify this function for querying the database to get the products with stock_warning.
-  return [
-    {
-      id: 1,
-      name: 'Blue T-Shirt',
-      stock: 1,
-      stock_warning: 2,
-      last_sold: '2022-02-01'
-    }
-  ]
+  queryString = 'SELECT a.id, name, stock, stock_warning, max(updatedAt) FROM (SELECT id, name, price, stock, stock_warning FROM products)a INNER JOIN (order_items INNER JOIN orders ON order_items.order_id=orders.id) ON a.id=order_items.product_id WHERE stock <= stock_warning GROUP BY a.id;'
+  return db.query(queryString, {
+    type: Sequelize.QueryTypes.SELECT
+  })
 }
 
 module.exports = Product
