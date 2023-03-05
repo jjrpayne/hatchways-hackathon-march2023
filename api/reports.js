@@ -40,7 +40,7 @@ const stockWarning = async (req, res, next) => {
         name: product.name,
         stock: product.stock,
         stock_warning: product.stock_warning,
-        last_sold: product["max(updatedAt)"]
+        last_sold: product.updatedAt
       }
     })
     return res.json({products: productsToReturn})

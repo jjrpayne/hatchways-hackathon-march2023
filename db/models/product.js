@@ -29,7 +29,9 @@ const Product = db.define('product', {
 }, { timestamps: true })
 
 Product.getStockWarningProducts = async function () {
-  queryString = 'SELECT a.id, name, stock, stock_warning, max(updatedAt) FROM (SELECT id, name, price, stock, stock_warning FROM products)a INNER JOIN (order_items INNER JOIN orders ON order_items.order_id=orders.id) ON a.id=order_items.product_id WHERE stock <= stock_warning GROUP BY a.id;'
+  // from part 3: "In this assessment, we’re assuming that every time an order is created with an item, the product stock is updated."
+  // so we can just use the updatedAt column as a last sold timestamp
+  queryString = 'SELECT id, name, stock, stock_warning, updatedAt FROM products WHERE stock <= stock_warning;'
   return db.query(queryString, {
     type: Sequelize.QueryTypes.SELECT
   })
